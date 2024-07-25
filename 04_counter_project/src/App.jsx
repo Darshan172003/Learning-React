@@ -3,7 +3,7 @@ import './App.css'
 
 function App() {
 
-  let [counter, setcounter] = useState(0)
+  let [counter, setcounter] = useState(0) // useState hook to manage state in functional component 
 
   // let counter =  0
 
@@ -21,7 +21,7 @@ function App() {
   return (
     <>
       <h1>Learning React</h1>
-      <h2>Counter Value: {counter}</h2>
+      <h2>Counter Value: {counter}</h2> 
 
       <button onClick={addValue}>Add Value</button>
       <br />
