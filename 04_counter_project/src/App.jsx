@@ -20,14 +20,14 @@ function App() {
 
   return (
     <>
-      <h1>Learning React</h1>
-      <h2>Counter Value: {counter}</h2> 
+      <h1 className='py-2 font-serif'>Learning React</h1>
+      <h2 className='py-2 font-serif'>Counter Value: {counter}</h2> 
 
-      <button onClick={addValue}>Add Value</button>
+      <button onClick={addValue} className='rounded-2xl my-1'>Add Value</button>
       <br />
-      <button onClick={removeValue}>Remove Value</button>
+      <button onClick={removeValue} className='rounded-2xl my-1'>Remove Value</button>
     </>
-  )
+  ) 
 }
 
 export default App
