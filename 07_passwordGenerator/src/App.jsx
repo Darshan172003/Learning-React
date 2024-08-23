@@ -4,8 +4,8 @@ import './App.css'
 function App() {
 
   const [length, setLength] = useState(8);
-  const [numberallowed, setNumberallowed] = useState(true);
-  const [specialChar, setSpecialChar] = useState(true);
+  const [numberallowed, setNumberallowed] = useState(false);
+  const [specialChar, setSpecialChar] = useState(false);
   const [password, setPassword] = useState("");
 
   // useRef hook
@@ -29,6 +29,8 @@ function App() {
   }, [length, numberallowed, specialChar, setPassword ] )
 
   const copypassword = useCallback(() => {
+    passwordRef.current?.select()
+    passwordRef.current?.setSelectionRange(0, 50)
     window.navigator.clipboard.writeText(password)
   }, [password])
 
@@ -50,14 +52,14 @@ function App() {
           />
           <button
           onClick={copypassword}
-            className='outline-none bg-blue-700 text-white px-3 py-0.5 shrink-0'
+          className='outline-none bg-blue-700 text-white px-3 py-0.5 shrink-0'
           >Copy</button>
 
         </div>
         <div className='flex text-sm gap-x-2'>
           <div className='flex items-center gap-x-1'>
             <input type="range"
-              min={6}
+              min={10}
               max={50}
               value={length}
               className='cursor-pointer'
