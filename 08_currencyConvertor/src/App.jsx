@@ -1,4 +1,4 @@
-
+import './hooks/useCurrencyInfo'
 import './App.css'
 
 function App() {
