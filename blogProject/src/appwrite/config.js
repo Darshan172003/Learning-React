@@ -1,4 +1,4 @@
-import conf from "../conf/conf";
+import conf from "../conf/conf.js";
 import { Client, ID, Databases, Storage, Query } from "appwrite";
 
 export class Service {
@@ -27,7 +27,7 @@ export class Service {
                     image,
                     status,
                     userId,
-                    createdAt: new Date().getTime(),
+                    // createdAt: new Date().getTime(),
                 }
             )
         } catch (error) {
@@ -46,7 +46,7 @@ export class Service {
                     content,
                     image,
                     status,
-                    updatedAt: new Date().getTime(),
+                    // updatedAt: new Date().getTime(),
                 }
             )
         } catch (error) {
